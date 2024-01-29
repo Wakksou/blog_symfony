@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InscriptionController!{% endblock %}
+
+{% block body %}
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url( {{asset('img/bg_signup.jpg')}}) center / cover no-repeat;">
+    <section style="padding-top: 0px;margin-bottom: 70px;margin-top: 70px;">
+        <div class="section-bg-overlay" style="background: rgba(230,167,86,0.36);">
+            <div class="form-box">
+                <div class="form-value">
+                    {{ form_start(RegistrationFormType) }}
+                    <div class="inputbox">{{ form_row(RegistrationFormType.Email, {'label':'Adresse mail', 'attr':{'class':'form-label form-label', 'type':'email'}}) }}</div>
+                        <div class="inputbox"><input type="text" required=""><label class="form-label" for="">Pseudo</label></div>
+                        {#<div class="inputbox"><input type="email" required=""><label class="form-label" for="">Email</label></div>#}
+                        <div class="inputbox"><input type="password" required=""><label class="form-label" for="">Password</label></div>
+                        <div class="forget"><label class="form-label" for=""><input type="checkbox">Je souhaite m'inscrire à la newsletter pour&nbsp;<br>recevoir les actualités de "Gourmandises<br>insolentes"</label></div><button>S'inscrire</button>
+                    {{ form_end(RegistrationFormType) }}
+                        <div class="register">
+                            <p style="font-weight: bold;">Déjà un compte ? Connectez-vous !</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}

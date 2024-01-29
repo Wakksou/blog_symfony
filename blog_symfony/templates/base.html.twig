@@ -4,14 +4,32 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&amp;display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+        <link rel="stylesheet" href="{{asset('css/Black-Navbar.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Overlay-Login-Form.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Signup-page-with-overlay.css')}}">
+        <link rel="stylesheet" href="{{asset('css/multi-step-form-1.css')}}">
+        <link rel="stylesheet" href="{{asset('css/Multi-step-form.css')}}">
+
+
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
-{% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
+        {% block navbar %} {% include 'fragments/navbar.html.twig' %} {% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %} {% include 'fragments/footer.html.twig' %} {% endblock %}
+        <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('js/current-day.js')}}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="{{asset('js/Multi-step-form-script.js')}}"></script>
     </body>
 </html>

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ConnexionController!{% endblock %}
+
+{% block body %}
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url({{asset('img/bg_signup.jpg')}}) center / cover no-repeat;">
+    <section style="padding-top: 0px;margin-bottom: 70px;margin-top: 70px;">
+        <div class="section-bg-overlay" style="background: rgba(230,167,86,0.36);">
+            <div class="form-box">
+            {% if error %}
+                <div class="alert alert-danger alert-dismissible" role="alert"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="alert"></button>
+                    <h4 class="alert-heading">Attention</h4><span><strong>{{error.messageKey}}</strong></span>
+                </div>
+            {% endif %}
+                <div class="form-value">
+                    <form action="{{ path('app_connexion') }}" method="post">
+                        <div class="inputbox">
+                            <input type="text" id="username"name="_username" required="" ><label class="form-label" for="">Nom d'utilisateur </label>
+                        </div>
+                        <div class="inputbox">
+                            <input type="password" id="password" name="_password" required=""><label class="form-label" for="">Mot de passe</label>
+                        </div>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        <div class="forget"></div><button type="submit">Se connecter</button>
+                        <div class="register">
+                            <p style="font-weight: bold;">Nouveau sur Gourmandises Insolentes ?<br>Inscrivez-vous !</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}

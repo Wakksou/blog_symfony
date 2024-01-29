@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LandingController!{% endblock %}
+
+{% block body %}
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url({{asset('img/bg_accueil_.png')}}) center / cover no-repeat;">
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" src="{{asset('img/img_accueil.jpg')}}" style="padding-right: 57px;padding-bottom: 0px;margin-bottom: 0px;margin-right: -57px;">
+                <div class="text-center intro-text p-5 rounded bg-faded">
+                    <h2 class="section-heading mb-4"><span class="section-heading-upper">gourmandises insolentes vous présente</span><span class="section-heading-lower" style="margin-top: 5px;"><strong>Ô GRAND CHEF CUISTOT</strong></span></h2>
+                    <p class="mb-3">Envie de vous évader ? Flemme de cuisiner des Pastabox ? Envie d'épater votre compagne ?&nbsp;<br>Gourmandises insolentes est fait pour vous ! Naviguez à travers les différentes recettes créées par nos cuistots en herbe, et rejoignez notre communauté gourmandes</p>
+                    <div class="mx-auto intro-button"><a class="btn btn-primary d-inline-block mx-auto btn-xl" role="button" href="#" style="margin-bottom: 0px;">Voir la liste des recettes</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section cta" style="padding-top: 104px;margin-top: 140px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="text-center cta-inner rounded">
+                        <h2 class="section-heading mb-4"><span class="section-heading-upper">notre promesse</span><span class="section-heading-lower">pour vous</span></h2>
+                        <p class="mb-0">Plus jamais de soirées Mcdo, plus jamais les pizzas Sodebo, finies les conserves William Saurin, préparez-vous à vous surprendre !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}
