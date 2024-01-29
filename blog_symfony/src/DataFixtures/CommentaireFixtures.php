@@ -37,7 +37,7 @@ class CommentaireFixtures extends Fixture
             $user= new User();
                 $user->setPseudo("User$i")
                 ->setEmail("User$i@gmail.com")
-                ->setPassword($this->passwordHasher->hashPassword($user,"UserPassword$i"))
+                ->setPassword($this->passwordHasher->hashPassword($user,"motdepasse"))
                 ->setAge(34)
                 ->setVille("Ville$i");
 

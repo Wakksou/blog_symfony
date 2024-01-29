@@ -39,7 +39,7 @@ class RecetteFixtures extends Fixture
                 $user= new User();
                 $user->setPseudo("Utilisateur$i")
                 ->setEmail("Utilisateur$i@gmail.com")
-                ->setPassword($this->passwordHasher->hashPassword($user,"UtilisateurPassword$i"))
+                ->setPassword($this->passwordHasher->hashPassword($user,"motdepasse"))
                 ->setAge(34)
                 ->setVille("Ville$i");
                 

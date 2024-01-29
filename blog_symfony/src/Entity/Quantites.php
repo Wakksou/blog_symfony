@@ -19,7 +19,7 @@ class Quantites
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?ingredient $ingredient = null;
+    private ?Ingredient $ingredient = null;
 
     #[ORM\Column(length: 255)]
     private ?string $quantites = null;
@@ -41,12 +41,12 @@ class Quantites
         return $this;
     }
 
-    public function getIngredient(): ?ingredient
+    public function getIngredient(): ?Ingredient
     {
         return $this->ingredient;
     }
 
-    public function setIngredient(?ingredient $ingredient): static
+    public function setIngredient(?Ingredient $ingredient): static
     {
         $this->ingredient = $ingredient;
 

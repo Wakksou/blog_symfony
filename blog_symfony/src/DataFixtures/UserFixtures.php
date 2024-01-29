@@ -30,7 +30,7 @@ class UserFixtures extends Fixture
             $User= new User();
             $User->setPseudo($pseudo[$i])
             ->setEmail($mail[$i])
-            ->setPassword($this->passwordHasher->hashPassword($User,"UtilisateurPassword$i"))
+            ->setPassword($this->passwordHasher->hashPassword($User,"motdepasse"))
             ->setAge($age[$i])
             ->setVille($ville[$i]);
             
